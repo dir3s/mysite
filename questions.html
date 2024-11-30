@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html>
+<title>
+    Запитання
+</title>
+<body>
+<header>
+    <style>
+        /* Стилізація хедера */
+        header {
+            background-color: #f7f6f4;
+            padding: 10px 0;
+            border-bottom: 4px solid #076cac;
+            width: 100%;
+            box-sizing: border-box;
+            display: flex; /* Додаємо Flexbox */
+            align-items: center; /* Вертикальне вирівнювання */
+            justify-content: space-between; /* Розподіл простору між елементами */
+        }
+
+        /* Логотип */
+        .logo {
+            width: 100px;
+        }
+
+        /* Навігаційне меню */
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li {
+            margin-right: 25px;
+        }
+
+        nav ul li a {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            color: #076cac;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .bold-link {
+            color: #000000;
+            font-weight: bold;
+        }
+
+        /* Стилізація кнопки входу */
+        .login-button {
+            padding: 10px 20px;
+            background-color: #076cac;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-right: 70px;
+        }
+
+        .login-button:hover {
+            background-color: #054771;
+        }
+
+        /* Стилі для кнопки меню */
+        .menu-button {
+            display: none;
+            background-color: #076cac;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            margin-left: 70px;
+        }
+
+        .down-content {
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            background-color: #DCDCDC;
+            min-width: 155px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            z-index: 1;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .down-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            border-bottom: 1px solid #ccc;
+            transition: background-color 0.2s ease;
+        }
+
+        .down-content a:hover {
+            background-color:#A9A9A9;
+        }
+
+        .down:hover .down-content {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .down:hover .menu-button {
+            background-color: #054771;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+
+            .menu-button {
+                display: inline-block;
+            }
+        }
+    </style>
+
+    <img src="icon.jpg" alt="Логотип" class="logo" style="height: 70px;">
+    <nav>
+        <ul>
+            <li><a href="home.html">Головна</a></li>
+            <li><a href="about.html">Про нас</a></li>
+            <li><a href="contact.html">Контакти</a></li>
+            <li><a href="questions.html" class="bold-link">Запитання</a></li>
+        </ul>
+    </nav>
+    <div class="down">
+        <button class="menu-button">Меню</button>
+        <div class="down-content">
+            <li><a href="home.html">Головна</a></li>
+            <li><a href="about.html">Про нас</a></li>
+            <li><a href="contact.html">Контакти</a></li>
+            <li><a href="questions.html" class="bold-link">Запитання</a></li>
+        </div>
+    </div>
+    <button class="login-button" onclick="window.location.href='login.html';">Увійти</button>
+</header>
+
+<main>
+    <h2>Запитання</h2>
+    <p>Найпоширеніші запитання, які ми отримуємо:</p>
+    <ul>
+        <li><strong>Як створити обліковий запис?</strong> <br>
+            Відповідь: Перейдіть на сторінку "Увійти" та натисніть "Реєстрація". Заповніть форму і підтвердьте свою електронну пошту.
+        </li>
+        <li><strong>Як зв'язатися зі службою підтримки?</strong> <br>
+            Відповідь: Ви можете звернутися до нас через форму у розділі "Контакти".
+        </li>
+        <li><strong>Чи доступні ваші послуги за межами України?</strong> <br>
+            Відповідь: Так, наші послуги доступні у всьому світі.
+        </li>
+    </ul>
+    <p>Якщо у вас є додаткові запитання, звертайтеся через <a href="contact.html">форму зворотного зв'язку</a>.</p>
+</main>
+</body>
+</html>

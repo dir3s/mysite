@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Про нас</title>
+    <style>
+        /* Стилізація хедера */
+        header {
+            background-color: #f7f6f4;
+            padding: 10px 0;
+            border-bottom: 4px solid #076cac;
+            width: 100%;
+            box-sizing: border-box;
+            display: flex; /* Додаємо Flexbox */
+            align-items: center; /* Вертикальне вирівнювання */
+            justify-content: space-between; /* Розподіл простору між елементами */
+        }
+
+        .logo {
+            width: 100px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li {
+            margin-right: 25px;
+        }
+
+        nav ul li a {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            color: #076cac;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .bold-link {
+            color: #000000;
+            font-weight: bold;
+        }
+
+        .login-button {
+            padding: 10px 20px;
+            background-color: #076cac;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-right: 70px;
+        }
+
+        .login-button:hover {
+            background-color: #054771;
+        }
+
+        .menu-button {
+            display: none; /* Приховуємо кнопку за замовчуванням */
+            background-color: #076cac;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            margin-left: 70px;
+        }
+
+        .down-content {
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            background-color: #DCDCDC;
+            min-width: 155px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            z-index: 1;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .down-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            border-bottom: 1px solid #ccc;
+            transition: background-color 0.2s ease;
+        }
+
+        .down-content a:hover {
+            background-color: #A9A9A9;
+        }
+
+        .down:hover .down-content {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .down:hover .menu-button {
+            background-color: #054771;
+        }
+
+        /* Стилі основного тексту */
+        main {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <img src="icon.jpg" alt="Логотип" class="logo" style="height: 70px;">
+    <nav>
+        <ul>
+            <li><a href="home.html">Головна</a></li>
+            <li><a href="about.html" class="bold-link">Про нас</a></li>
+            <li><a href="contact.html">Контакти</a></li>
+            <li><a href="questions.html">Запитання</a></li>
+        </ul>
+    </nav>
+    <div class="down">
+        <button class="menu-button">Меню</button>
+        <div class="down-content">
+            <li><a href="home.html">Головна</a></li>
+            <li><a href="about.html" class="bold-link">Про нас</a></li>
+            <li><a href="contact.html">Контакти</a></li>
+            <li><a href="questions.html">Запитання</a></li>
+        </div>
+    </div>
+    <button class="login-button" onclick="window.location.href='login.html';">Увійти</button>
+</header>
+<main>
+    <h1 style="text-align: center;">Про нас</h1>
+    <p>Ласкаво просимо на наш сервіс пошуку житла для відпочинку та оренди! Наш проєкт створений для тих, хто цінує комфорт, зручність і хоче знайти ідеальне місце для проживання без зайвих турбот.</p>
+    <p>Ми допомагаємо мандрівникам і туристам швидко знайти житло, яке відповідає їхнім потребам: від бюджетних хостелів до розкішних вілл. Також наш сервіс стане в нагоді власникам нерухомості, які хочуть легко і безпечно здавати свої апартаменти в оренду.</p>
+    <h2>Наша місія</h2>
+    <p>Ми прагнемо створити найбільш зручний та надійний інструмент для пошуку житла, який допоможе людям знайти комфортне місце для відпочинку в будь-якому куточку світу.</p>
+    <p>Наш сервіс об’єднує власників житла та мандрівників, створюючи просту, прозору і зручну платформу для взаємодії.</p>
+    <h2>Що ми пропонуємо:</h2>
+    <ul>
+        <li><b>Швидкий пошук житла:</b> Завдяки фільтрам ви можете обрати тип житла, ціну, розташування та інші параметри, щоб знайти найкращий варіант.</li>
+        <li><b>Надійність:</b> Всі об’єкти перевірені, а відгуки реальних гостей допоможуть зробити правильний вибір.</li>
+        <li><b>Простота бронювання:</b> Лише кілька кліків — і житло заброньоване!</li>
+        <li><b>Гнучкість для власників:</b> Якщо ви здаєте житло, наша платформа дозволяє зручно керувати бронюваннями, спілкуватися з гостями та отримувати оплату.</li>
+    </ul>
+    <h2>Чому обирають нас:</h2>
+    <ul>
+        <li>Широка база житла — від економних варіантів до преміум-класу.</li>
+        <li>Прозорі умови — жодних прихованих комісій.</li>
+        <li>Цілодобова підтримка — ми завжди на зв’язку, щоб допомогти вам.</li>
+    </ul>
+    <h2>Наші плани</h2>
+    <p>У майбутньому ми плануємо розширити базу житла, додати функції рекомендацій та зробити ваш досвід ще комфортнішим. Ми прагнемо створити платформу, яка стане вашим надійним партнером у пошуку житла для відпочинку.</p>
+    <p>Дякуємо, що обираєте нас! Ми працюємо, щоб зробити ваші подорожі незабутніми!</p>
+</main>
+</body>
+</html>

@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<html>
+<title>
+    Контакти
+</title>
+<body>
+<header>
+    <style>
+        /* Стилізація хедера */
+        header {
+            background-color: #f7f6f4;
+            padding: 10px 0;
+            border-bottom: 4px solid #076cac;
+            width: 100%;
+            box-sizing: border-box;
+            display: flex; /* Додаємо Flexbox */
+            align-items: center; /* Вертикальне вирівнювання */
+            justify-content: space-between; /* Розподіл простору між елементами */
+        }
+
+        /* Логотип */
+        .logo {
+            width: 100px;
+        }
+
+        /* Навігаційне меню */
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li {
+            margin-right: 25px;
+        }
+
+        nav ul li a {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            color: #076cac;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .bold-link {
+            color: #000000;
+            font-weight: bold;
+        }
+
+        /* Стилізація кнопки входу */
+        .login-button {
+            padding: 10px 20px;
+            background-color: #076cac;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-right: 70px; /* Зміна на margin-left */
+        }
+
+        .login-button:hover {
+            background-color: #054771;
+        }
+
+        /* Стилі для кнопки меню */
+        .menu-button {
+            display: none; /* Приховуємо кнопку за замовчуванням */
+            background-color: #076cac;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            margin-left: 70px;
+        }
+
+        /* Випадаюче меню */
+        .down-content {
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            background-color: #DCDCDC;
+            min-width: 155px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            z-index: 1;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .down-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            border-bottom: 1px solid #ccc;
+            transition: background-color 0.2s ease;
+        }
+
+        .down-content a:hover {
+            background-color:#A9A9A9;
+        }
+
+        .down:hover .down-content {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .down:hover .menu-button {
+            background-color: #054771;
+        }
+
+        /* Медіа-запит для пристроїв шириною менше 768px */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+
+            .menu-button {
+                display: inline-block; /* Відображаємо кнопку меню на мобільних пристроях */
+            }
+        }
+    </style>
+
+    <img src="icon.jpg" alt="Логотип" class="logo" style="height: 70px;">
+    <nav>
+        <ul>
+            <li><a href="home.html">Головна</a></li>
+            <li><a href="about.html">Про нас</a></li>
+            <li><a href="contact.html" class="bold-link">Контакти</a></li>
+            <li><a href="questions.html">Запитання</a></li>
+        </ul>
+    </nav>
+    <div class="down">
+        <button class="menu-button">Меню</button>
+        <div class="down-content">
+            <li><a href="home.html">Головна</a></li>
+            <li><a href="about.html">Про нас</a></li>
+            <li><a href="contact.html" class="bold-link">Контакти</a></li>
+            <li><a href="questions.html">Запитання</a></li>
+        </div>
+    </div>
+    <button class="login-button" onclick="window.location.href='login.html';">Увійти</button>
+</header>
+
+<main>
+    <h2>Контакти</h2>
+    <p>Ми завжди раді допомогти вам! Зв’яжіться з нами будь-яким зручним способом:</p>
+    <ul>
+        <li><strong>Телефон:</strong> +380 (99) 123-45-67</li>
+        <li><strong>Email:</strong> info@yourwebsite.com</li>
+        <li><strong>Адреса:</strong> м. Чернігів, вул. Незалежності, 12</li>
+    </ul>
+    <p>Слідкуйте за нами у соціальних мережах:</p>
+    <ul>
+        <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+        <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+        <li><a href="https://www.twitter.com" target="_blank">Twitter</a></li>
+    </ul>
+    <form action="send_message.php" method="POST">
+        <b><label for="name">Ваше ім'я: </label>
+        <input type="text" id="name" name="name" required><br></b>
+
+        <b><label for="email">Ваш Email:</label>
+        <input type="email" id="email" name="email" required><br></b>
+
+        <label for="message">Ваше повідомлення:</label><br>
+        <textarea id="message" name="message" rows="5" required></textarea><br>
+
+        <button type="submit">Відправити</button>
+    </form>
+</main>
+</body>
+</html>
